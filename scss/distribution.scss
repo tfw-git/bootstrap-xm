@@ -1,0 +1,117 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 功能色
+$h4-color:$lightGrey;
+// 按钮色
+$but-color:$light-brown;
+// 边框色
+$border-color:$border-color;
+// h6颜色
+$h6-color:$white;
+// 公共样式
+.tfw-distribution {
+    h3 {
+        text-align: center;
+        padding-bottom: 22px;
+        font-size: 28px;
+        color: #333;
+        display: block;
+        margin: 0;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 28px;
+        color: $h4-color;
+        margin-bottom: 60px;
+
+    }
+
+    .tfw-row {
+        margin: 0;
+        width: 100%;
+
+        &>div>div {
+            position: relative;
+            border-radius: 0;
+            border: 0;
+
+            img {
+                width: 100%;
+            }
+
+            h6 {
+                text-align: center;
+                padding: 15px 0;
+                font-size: 16px;
+                font-weight: normal;
+                color: $h6-color;
+                background: rgba(0, 0, 0, 0.7);
+                width: 40%;
+                position: absolute;
+                top: 30%;
+            }
+
+            .card-xia {
+                border: solid $border-color 1px;
+                border-top: 0;
+                padding: 20% 10%;
+                margin: 0;
+                padding-top: 40px;
+                padding-bottom: 40px;
+
+                p {
+                    font-size: 14px;
+                    color: #666;
+                }
+
+                button {
+                    padding: 20px 0 0 0;
+                    border: none;
+                    background: none;
+                    font-size: 14px;
+                    color: #999;
+                }
+            }
+
+        }
+
+    }
+
+    &>button {
+        padding: 10px 50px;
+        border: solid $but-color 1px;
+        border-radius: 75px;
+        background: none;
+        color: $but-color;
+        display: block;
+        margin:50px auto 0;
+        outline: none;
+    }
+}
+
+// 大屏时
+@media (min-width:992px) {
+    .tfw-distribution {
+        .tfw-row {
+            &>div>div {
+                margin-bottom: 20px;
+
+                h6 {
+                    top: 20%;
+                }
+            }
+
+        }
+    }
+}
+
+// 小屏和中屏时
+@media (max-width:992px) {
+    .tfw-distribution {
+        &>div>div {
+            margin-bottom: 20px;
+        }
+    }
+}

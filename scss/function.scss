@@ -1,0 +1,51 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 功能色
+$card-bgcolor:$brown;
+.tfw-function{
+    margin:0 auto;
+    border-bottom:solid #f1f1f1 1px;
+    .tfw-col{
+        padding: 0;
+        .tfw-card-one{
+            width: 100%;
+            display: none;
+            border: 0;
+            background-color:$card-bgcolor ;
+        }
+        .tfw-card-one,.tfw-card-tow{
+            border-bottom: solid #f1f1f1 1px;
+            border-left: solid #f1f1f1 1px;
+            width: 100%;
+            text-align: center;
+            padding: 50px 0;
+            a{
+                text-decoration: none;
+                color: black;
+            //    margin-top: 10px;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+            }
+        }
+        &:hover>.tfw-card-one{
+            display: block;
+        }
+        &:hover>.tfw-card-tow{
+            display: none;
+        }
+    }
+}
+// 小屏幕时
+@media (max-width:768px){
+    .tfw-function{
+        .tfw-col{
+            width: 50%;
+        }
+    }
+}

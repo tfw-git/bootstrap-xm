@@ -1,0 +1,76 @@
+.tfw-survey .survey-one {
+  width: 98%;
+  margin: 60px auto; }
+  .tfw-survey .survey-one h3 {
+    font-size: 28px;
+    color: #333;
+    display: inline-block; }
+  .tfw-survey .survey-one span {
+    font-size: 28px;
+    color: #c2c0c0;
+    display: inline-block; }
+.tfw-survey .survey-tow {
+  position: relative;
+  background-image: url(../img/survey/about_bj.jpg);
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 120px; }
+  .tfw-survey .survey-tow::after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both; }
+  .tfw-survey .survey-tow::after {
+    zoom: 1; }
+  .tfw-survey .survey-tow > div {
+    width: 54%;
+    float: left;
+    margin-left: 2%; }
+    .tfw-survey .survey-tow > div h3 {
+      font-size: 24px;
+      color: #444; }
+    .tfw-survey .survey-tow > div h3 + p {
+      margin: 20px 0;
+      padding: 0 30px;
+      border-bottom: 3px solid #755C40;
+      width: 30px; }
+    .tfw-survey .survey-tow > div p + p {
+      color: #888;
+      line-height: 25px;
+      font-size: 14px; }
+    .tfw-survey .survey-tow > div button {
+      margin-top: 110px;
+      padding: 10px 50px;
+      border: solid #755C40 1px;
+      border-radius: 75px;
+      background: none;
+      color: #755C40;
+      outline: none; }
+  .tfw-survey .survey-tow > :nth-child(2) {
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    width: 440px;
+    top: -120px; }
+.tfw-survey::before {
+  content: "";
+  display: table; }
+
+@media (min-width: 992px) {
+  .tfw-survey {
+    margin-top: 200px;
+    width: 100%; }
+    .tfw-survey .survey-tow {
+      margin-bottom: 120px; } }
+@media (max-width: 992px) {
+  .tfw-survey {
+    margin-top: 60px;
+    width: 100%; }
+    .tfw-survey .survey-tow {
+      margin-bottom: 60px; }
+      .tfw-survey .survey-tow > :nth-child(1) {
+        width: 96%; }
+      .tfw-survey .survey-tow > :nth-child(2) {
+        display: none; } }
+
+/*# sourceMappingURL=survey.css.map */

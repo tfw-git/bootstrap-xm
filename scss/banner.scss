@@ -1,0 +1,51 @@
+@charset 'utf-8';
+.tfw-banner{
+    ul{
+        li{
+           top: 10px;
+        }
+    }
+}
+// 大屏时
+@media (min-width:992px) {
+    .tfw-banner{
+        .tfw-l{
+            justify-content: unset;
+            span{
+                background-color: black;
+                height: 40px;
+                border-radius: 2px;
+                margin-left: 16px;
+            }
+        }
+        .tfw-r{
+            justify-content: flex-end;
+            span{
+                background-color: black;
+                height: 40px;
+                border-radius: 2px;
+                margin-right: 16px;
+            }
+        }
+    }
+}
+// 中屏和小屏时
+@media (max-width:992px) {
+    .tfw-banner{
+        margin-top:60px;
+        .tfw-l{
+            justify-content: unset;
+            span{
+                margin-left: 12px;
+            }
+        }
+        .tfw-r{
+            justify-content: flex-end;
+            span{
+                margin-right: 12px;
+            }
+        }
+    }
+   
+  
+}

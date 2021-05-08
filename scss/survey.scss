@@ -1,0 +1,120 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 功能色
+$lightGrey:$lightGrey;
+// 横线颜色
+$p-color:$brown;
+
+// 公共样式
+.tfw-survey {
+    .survey-one {
+        width: 98%;
+        margin: 60px auto;
+
+        h3 {
+            font-size: 28px;
+            color: #333;
+            display: inline-block;
+        }
+
+        span {
+            font-size: 28px;
+            color: $lightGrey;
+            display: inline-block;
+        }
+    }
+
+    .survey-tow {
+        position: relative;
+        // 防止高度坍塌
+        &::after{
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        &::after{
+            zoom: 1;
+        }
+        background-image: url(../img/survey/about_bj.jpg);
+        background-size: cover;
+        padding-top: 80px;
+        padding-bottom: 120px;
+        &>div {
+            width: 54%;
+            float: left;
+            margin-left: 2%;
+            h3 {
+                font-size: 24px;
+                color: #444;
+            }
+            h3+p {
+                margin: 20px 0;
+                padding: 0 30px;
+                border-bottom: 3px solid $p-color;
+                width: 30px;
+            }
+            p+p {
+                color: #888;
+                line-height: 25px;
+                font-size: 14px;
+            }
+
+            button {
+                margin-top: 110px;
+                padding: 10px 50px;
+                border: solid $p-color 1px;
+                border-radius: 75px;
+                background: none;
+                color: $p-color;
+                outline: none;
+            }
+        }
+        &>:nth-child(2){
+            margin-right:10px;
+            position: absolute;
+            right: 0;
+            width: 440px;
+            top: -120px;
+        }
+
+    }
+
+    // 防止外边距溢出
+    &::before {
+        content: "";
+        display: table;
+    }
+}
+
+// 大屏时
+@media (min-width:992px) {
+    .tfw-survey {
+        margin-top: 200px;
+        width: 100%;
+
+        .survey-tow {
+            margin-bottom: 120px;
+        }
+    }
+}
+
+// 中屏和小屏时
+@media (max-width:992px) {
+    .tfw-survey {
+        margin-top: 60px;
+        width: 100%;
+
+        .survey-tow {
+            margin-bottom: 60px;
+            &>:nth-child(1){
+                width: 96%;
+            }
+            &>:nth-child(2){
+                display: none;
+            }
+        }
+    }
+
+}

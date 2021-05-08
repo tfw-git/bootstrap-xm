@@ -1,0 +1,174 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 功能颜色
+// 标题颜色
+$h-color:$light-brown;
+// 边框色
+$b-color:$border-color;
+// 公共样式
+.tfw-journalism {
+    a {
+        text-decoration: none;
+    }
+    background-image: url(../img/Journalism/ne_ct.jpg);
+    background-size: cover;
+    width: 100%;
+    .main {
+        width: 98%;
+        margin: 0 auto;
+        &>:nth-child(1) {
+            margin-bottom: 60px;
+            h3 {
+                text-align: center;
+                padding-bottom: 22px;
+                font-size: 28px;
+                color: #333;
+                display: block;
+                margin: 0;
+                
+            }
+            h4 {
+                text-align: center;
+                font-size: 28px;
+                color: #c2c0c0;
+                margin: 0;
+            }
+        }
+
+        .main-bom>:nth-child(1){
+            background-color: white;
+            box-shadow: 5px 5px 5px -1px #eeeeee;
+            padding-bottom: 20px;
+            .top {
+                display: flex;
+                border-bottom: solid $b-color 1px;
+
+                h3 {
+                    margin: 0;
+                    padding: 30px 0;
+                    text-align: center;
+                    width: 50%;
+
+                    a {
+                        font-size: 22px;
+                        color: #999;
+                    }
+                    &:hover{
+                        a{
+                            color: white;
+                        }
+                        background-color: $h-color;
+                    }
+                }
+            }
+
+            .bom {
+                ul {
+                    li {
+                        width: 90%;
+                        padding-bottom: 20px;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        border-bottom: solid $b-color 1px;
+
+                        .lf {
+                            margin-right: 20px;
+                            padding: 20px 0;
+                            background: $h-color;
+                            color: #fff;
+                            text-align: center;
+                            width: 80px;
+                            float: left;
+
+                            h4,
+                            p {
+                                margin: 0;
+                            }
+                        }
+
+                        .rg {
+                            h3 {
+                                margin:0 0 15px;
+                                font-size: 16px;
+                                color: #444;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+
+                            p {
+                                margin: 0;
+                                color: #999;
+                                line-height: 24px;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                            }
+                        }
+                        // 防止高度坍塌
+                        &>::after{
+                            content: "";
+                            display: block;
+                            clear: both;
+                            height: 0;
+                        }
+                        &>::after{
+                            zoom: 1;
+                        }
+
+                    }
+                }
+            }
+        }
+        .tu{
+            display: none;
+        }
+        &::before{
+            content: "";
+            display: table;
+        }
+    }
+
+}
+
+// 大屏时
+@media (min-width:992px) {
+    .tfw-journalism {
+        margin-top: 120px;
+        .main{
+            &>:nth-child(1){
+                margin: 120px 0 60px;
+            }
+           .main-bom{
+               display: flex;
+               &>:nth-child(1){
+                   width: 60%;
+               }
+               .tu{
+                display: block;
+                width: 40%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+           }
+           
+        }
+    }
+}
+
+// 中屏和小屏时候
+@media (max-width:992px) {
+    .tfw-journalism {
+        margin-top: 60px;
+        .main{
+            &>:nth-child(1){
+                margin: 60px 0 60px;
+            }
+        }
+    }
+}

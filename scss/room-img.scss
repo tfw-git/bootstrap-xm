@@ -1,0 +1,9 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+.tfw-img{
+    background: url(../img/room/room-img/timg1.jpg) no-repeat center center;
+    background-size:cover;
+    width:100%;
+    height: 320px;
+}

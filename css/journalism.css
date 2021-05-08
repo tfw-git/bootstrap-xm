@@ -1,0 +1,110 @@
+.tfw-journalism {
+  background-image: url(../img/Journalism/ne_ct.jpg);
+  background-size: cover;
+  width: 100%; }
+  .tfw-journalism a {
+    text-decoration: none; }
+  .tfw-journalism .main {
+    width: 98%;
+    margin: 0 auto; }
+    .tfw-journalism .main > :nth-child(1) {
+      margin-bottom: 60px; }
+      .tfw-journalism .main > :nth-child(1) h3 {
+        text-align: center;
+        padding-bottom: 22px;
+        font-size: 28px;
+        color: #333;
+        display: block;
+        margin: 0; }
+      .tfw-journalism .main > :nth-child(1) h4 {
+        text-align: center;
+        font-size: 28px;
+        color: #c2c0c0;
+        margin: 0; }
+    .tfw-journalism .main .main-bom > :nth-child(1) {
+      background-color: white;
+      box-shadow: 5px 5px 5px -1px #eeeeee;
+      padding-bottom: 20px; }
+      .tfw-journalism .main .main-bom > :nth-child(1) .top {
+        display: flex;
+        border-bottom: solid #e6e6e6 1px; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .top h3 {
+          margin: 0;
+          padding: 30px 0;
+          text-align: center;
+          width: 50%; }
+          .tfw-journalism .main .main-bom > :nth-child(1) .top h3 a {
+            font-size: 22px;
+            color: #999; }
+          .tfw-journalism .main .main-bom > :nth-child(1) .top h3:hover {
+            background-color: #90704D; }
+            .tfw-journalism .main .main-bom > :nth-child(1) .top h3:hover a {
+              color: white; }
+      .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li {
+        width: 90%;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-bottom: solid #e6e6e6 1px; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li .lf {
+          margin-right: 20px;
+          padding: 20px 0;
+          background: #90704D;
+          color: #fff;
+          text-align: center;
+          width: 80px;
+          float: left; }
+          .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li .lf h4,
+          .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li .lf p {
+            margin: 0; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li .rg h3 {
+          margin: 0 0 15px;
+          font-size: 16px;
+          color: #444;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li .rg p {
+          margin: 0;
+          color: #999;
+          line-height: 24px;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li > ::after {
+          content: "";
+          display: block;
+          clear: both;
+          height: 0; }
+        .tfw-journalism .main .main-bom > :nth-child(1) .bom ul li > ::after {
+          zoom: 1; }
+    .tfw-journalism .main .tu {
+      display: none; }
+    .tfw-journalism .main::before {
+      content: "";
+      display: table; }
+
+@media (min-width: 992px) {
+  .tfw-journalism {
+    margin-top: 120px; }
+    .tfw-journalism .main > :nth-child(1) {
+      margin: 120px 0 60px; }
+    .tfw-journalism .main .main-bom {
+      display: flex; }
+      .tfw-journalism .main .main-bom > :nth-child(1) {
+        width: 60%; }
+      .tfw-journalism .main .main-bom .tu {
+        display: block;
+        width: 40%; }
+        .tfw-journalism .main .main-bom .tu img {
+          width: 100%;
+          height: 100%; } }
+@media (max-width: 992px) {
+  .tfw-journalism {
+    margin-top: 60px; }
+    .tfw-journalism .main > :nth-child(1) {
+      margin: 60px 0 60px; } }
+
+/*# sourceMappingURL=journalism.css.map */

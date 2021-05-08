@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,QAAQ;EACJ,UAAU,EAAE,4DAA4D;EACxE,eAAe,EAAC,KAAK;EACrB,KAAK,EAAC,IAAI;EACV,MAAM,EAAE,KAAK",
+"sources": ["../scss/jourmalism-img.scss"],
+"names": [],
+"file": "jourmalism-img.css"
+}

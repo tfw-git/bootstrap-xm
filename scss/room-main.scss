@@ -1,0 +1,220 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 工具色
+// h6颜色
+$h6-color:$lightGrey;
+// ul选中颜色
+$ul-color:$light-brown;
+// li颜色
+$li-color:$font-color;
+
+// 公共样式
+.tfw-main {
+    a {
+        text-decoration: none;
+    }
+
+    h5 {
+        text-align: center;
+        margin: 0;
+        padding-bottom: 15px;
+        font-size: 28px;
+        color: #333;
+        font-weight: normal;
+    }
+
+    h6 {
+        text-align: center;
+        margin: 0 0 60px;
+        font-size: 18px;
+        color: $h6-color;
+        font-weight: normal;
+    }
+
+    .oneul{
+        margin: 0;
+
+        &>:nth-child(1) {
+            a {
+                border-bottom: 2px solid $ul-color;
+                color: $ul-color;
+            }
+        }
+
+        &>:nth-child(n+2) {
+            a {
+                color: $li-color;
+            }
+
+            &>:hover {
+                border-bottom: 2px solid $ul-color;
+                color: $ul-color;
+            }
+        }
+
+        li {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .tfw-row {
+        margin: 0;
+
+        .tfw-col {
+            margin-bottom: 30px;
+
+            &>div {
+                background-color: #f6f6f6;
+                padding: 10px;
+                text-align: center;
+                transition: 1s;
+
+                .tfw-card {
+                    border: 0;
+                    border-radius: 0;
+
+                    p {
+                        margin: 0;
+                        padding: 20px;
+                        font-size: 16px;
+                        background-color: #f6f6f6;
+                        transition: 1s;
+                    }
+                }
+
+                &:hover {
+                    background-color: $ul-color;
+                }
+
+                &:hover p {
+                    background-color: $ul-color;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .tfw-pages {
+        ul {
+            &>:nth-child(4) {
+                a {
+                    background-color: $ul-color;
+                    color: white;
+                }
+            }
+            &>:nth-child(n+1):hover{
+                a{
+                    background-color: $ul-color;
+                    color: white;
+                }
+            }
+            li {
+                a {
+                    padding: 10px 15px;
+                    border: solid #e6e6e6 1px;
+                    color: #333;
+                    margin:0 2px
+                }
+
+            }
+        }
+
+    }
+
+}
+
+// 大屏时
+@media (min-width:992px) {
+    .tfw-main {
+        margin-top: 120px;
+
+        .oneul{
+            justify-content: center;
+
+            li {
+                margin: 0 2px;
+
+                a {
+                    padding: 20px 40px;
+
+                }
+
+            }
+        }
+
+        .tfw-row {
+            margin-top: 120px;
+        }
+    }
+}
+
+// 中屏
+@media (max-width:992px) and (min-width:768px) {
+    .tfw-main {
+        margin-top: 60px;
+
+        .oneul{
+            padding: 0 10%;
+
+            li {
+                width: 25%;
+                text-align: center;
+
+                a {
+                    padding: 15px 20px;
+                }
+            }
+        }
+
+        .tfw-row {
+            margin-top: 60px;
+        }
+    }
+}
+
+// 小屏
+@media (max-width:768px) {
+    .tfw-main {
+        margin-top: 60px;
+
+        .oneul{
+            flex-flow: row wrap;
+
+            &>:nth-child(1),
+            &>:nth-child(2) {
+                margin-bottom: 30px;
+            }
+
+            li {
+                width: 50%;
+                text-align: center;
+
+                a {
+                    padding: 15px 20px;
+                }
+            }
+        }
+
+        .tfw-row {
+            margin-top: 60px;
+        }
+        .tfw-pages {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                        padding: 5px 8px;
+                        border: solid #e6e6e6 1px;
+                        color: #333;
+                        margin:0 2px
+                    }
+    
+                }
+            }
+    
+        }
+    }
+}

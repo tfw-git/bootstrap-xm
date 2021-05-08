@@ -1,0 +1,31 @@
+.tfw-banner ul li {
+  top: 10px; }
+
+@media (min-width: 992px) {
+  .tfw-banner .tfw-l {
+    justify-content: unset; }
+    .tfw-banner .tfw-l span {
+      background-color: black;
+      height: 40px;
+      border-radius: 2px;
+      margin-left: 16px; }
+  .tfw-banner .tfw-r {
+    justify-content: flex-end; }
+    .tfw-banner .tfw-r span {
+      background-color: black;
+      height: 40px;
+      border-radius: 2px;
+      margin-right: 16px; } }
+@media (max-width: 992px) {
+  .tfw-banner {
+    margin-top: 60px; }
+    .tfw-banner .tfw-l {
+      justify-content: unset; }
+      .tfw-banner .tfw-l span {
+        margin-left: 12px; }
+    .tfw-banner .tfw-r {
+      justify-content: flex-end; }
+      .tfw-banner .tfw-r span {
+        margin-right: 12px; } }
+
+/*# sourceMappingURL=banner.css.map */

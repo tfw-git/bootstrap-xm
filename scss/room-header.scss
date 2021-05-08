@@ -1,0 +1,125 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 工具色
+// 大屏时背景颜色
+$max_bgcolor:$white;
+// 大屏时菜单边框颜色
+$max_menu:$brown;
+// 设置整体高度
+// 大屏时
+@media (min-width:992px) {
+    .tfw-header{
+        height: 106px;
+        background-color: $max_bgcolor;
+        padding-left: 40px;
+        .tfw-logo{
+            width: 140px;
+            height: 50px;
+            background-image: url(../img/header/logo.png);
+        }
+        .tfw-menu{
+            height: 106px;
+            justify-content: flex-end;
+            padding-right: 20px;
+            ul{
+                height: 106px;
+                width: 100%;
+                li{
+                    margin-left: 44px;
+                    .active{
+                        color: $max_menu;
+                    }
+                }
+                &>:nth-child(2){
+                    border-bottom: 3px solid $max_menu;
+                    text-align: center;
+                    a{
+                        padding: 0;
+                        margin-top: 41px;
+                    } 
+                }
+                &>:nth-child(n+1){
+                    text-align: center;
+                    a{
+                        padding: 0;
+                        color: black;
+                        margin-top: 41px;
+                    }
+                    &:hover{
+                        a{
+                            color: $max_menu;
+                        }
+                        border-bottom: 3px solid $max_menu;
+                    }
+                }
+            }
+        }
+    }
+}
+// 小屏和中屏时
+@media (max-width:992px){
+    .tfw-header{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        height: 60px;
+        background-color: $max_menu;
+        // logo变小
+        a{
+            height: 40px;
+            padding: 0;
+            .tfw-logo{
+                width: 98px;
+                height: 40px;
+                background-image: url(../img/header/logo1.png);
+                background-size: 98px 40px;
+            }
+        }
+        .tfw-menu{
+            position: fixed;
+            top: 60px;
+            left: 0;
+            z-index: 99;
+            width: 100vw;
+            height:100vh;
+            background-color:$max_bgcolor;
+            ul{
+               padding-top: 10px;
+                width: 80%;
+                margin: 0 auto;
+                li{
+                    width: 100%;
+                    height: 54px;
+                    .active{
+                        color: $max_menu;
+                    }
+                    a{
+                        height: unset;
+                        text-align: left;
+                        margin: 0 auto;
+                        margin-top:15px;
+                        width: 80%;
+                        padding: 0;
+                    } 
+                }
+                &>:nth-child(2){
+                    border-bottom: 3px solid $max_menu;
+                }
+                &>:nth-child(n+1){
+                    a{
+                        color: black;
+                    }
+                    &:hover{
+                        a{
+                            color: $max_menu;
+                        }
+                        border-bottom: 3px solid $max_menu;
+                    }
+                }
+            }
+        }
+    }
+  
+}

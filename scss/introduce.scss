@@ -1,0 +1,93 @@
+@charset 'utf-8';
+// 引入颜色文件
+@import "./color.scss";
+// 工具色
+// 圆形背景色
+$yuan:$light-brown;
+//p标签颜色
+$p-color:$lightGrey;
+// 边框色
+$b-color:$border-color;
+// 公共样式
+.tfw-introduce {
+    width: 100%;
+    margin: 0;
+
+    &>div {
+        padding: 0 14px;
+        .col-one,.col-tow {
+            margin: 0 auto !important;
+            border: solid $b-color 1px;
+            padding: 60px 0;
+            width: 98%;
+            margin: 0 auto;
+            text-align: center;
+
+            div {
+                width: 76px;
+                height: 76px;
+                padding: 20px 22px;
+                background: $yuan;
+                display: inline-block;
+                border-radius: 76px;
+                box-shadow: 0px 0px 20px -5px $yuan;
+                border-color: $yuan;
+            }
+
+            h3 {
+                padding: 20px 0px;
+                font-size: 18px;
+                color: #555;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            p {
+                font-size: 14px;
+                padding: 0px 26px 0px 26px;
+                color:$p-color;
+                line-height: 25px;
+                margin: 0;
+            }
+        }
+        .col-tow{
+            display: none;
+            box-shadow:0px 0px 10px 1px $yuan;
+            background-color: $yuan;
+            border-color: $yuan;
+            div{
+                background-color: white;
+                box-shadow: 0px 0px 20px -5px white;
+            }
+            h3{
+                color: white;
+            }
+            p{
+                color:white;
+            }
+        }
+        &:hover>.col-one{
+            display: none;
+        }
+        &:hover>.col-tow{
+            display: block;
+        }
+    }
+}
+// 中屏时
+@media (min-width:768px) and (max-width:992px) {
+    .tfw-introduce{
+        &>div{
+            padding: 6px 0;
+        }
+    }
+}
+// 小屏时
+@media (max-width:768px) {
+    .tfw-introduce{
+        &>div{
+            width: 100%;
+            padding: 6px 0;
+        }
+    }
+}
